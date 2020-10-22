@@ -33,7 +33,7 @@ export default {
         headers: { platform: "pc", language: "en" },
       })
       .then((e) => {
-       this.items = e.data.payload.items
+        this.items = e.data.payload.items;
       });
   },
 };

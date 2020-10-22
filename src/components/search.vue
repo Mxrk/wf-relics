@@ -17,11 +17,23 @@
       <v-col v-for="(item, i) in model" :key="i">
         <v-card class="ml-2">
           <v-list v-if="model">
-            <v-card-title>{{item.name}}</v-card-title>
+            <v-card-title>{{ item.name }}</v-card-title>
             <v-card-text>
               <v-list-item v-for="(reward, i) in item.rewards" :key="i">
-                <a :href="reward.url" target="_blank">{{reward.itemName}}</a>
-                Chance: {{reward.chance}}% Price:{{reward.price}} plat
+                <a :href="reward.url" target="_blank">{{ reward.itemName }}</a>
+                <div class="ml-2">
+                  <v-col>
+                    <v-row>
+                      Chance:
+                      <span class="primary--text">{{ reward.chance }}</span
+                      >%
+                    </v-row>
+                    <v-row>
+                      Price:
+                      <span class="primary--text">{{ reward.price }}</span> plat
+                    </v-row>
+                  </v-col>
+                </div>
               </v-list-item>
             </v-card-text>
           </v-list>
